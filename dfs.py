@@ -61,14 +61,14 @@ class Graph:
 graph = Graph(directed=False)
 graph.add_edge('A', 'B')
 graph.add_edge('A', 'S')
-graph.add_edge('S', 'G')
+graph.add_edge('A', 'G')
 graph.add_edge('S', 'C')
 graph.add_edge('C', 'F')
-graph.add_edge('G', 'F')
-graph.add_edge('C', 'D')
+graph.add_edge('H', 'F')
+graph.add_edge('F', 'D')
 graph.add_edge('C', 'E')
 graph.add_edge('E', 'H')
 graph.add_edge('G', 'H')
-start, goal = 'A', 'H'
+start, goal = 'C', 'H'
 traced_path = graph.breadth_first_search(start, goal)
 if (traced_path): print('Path:', end=' '); Graph.print_path(traced_path, goal);print()
